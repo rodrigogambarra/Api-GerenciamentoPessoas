@@ -16,13 +16,13 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
-
     private final PersonRepository personRepository;
-
     private final PersonMapper personMapper;
 
     public MessageResponseDTO create(PersonDTO personDTO) {
+
         Person person = personMapper.toModel(personDTO);
+
         Person savedPerson = personRepository.save(person);
 
         MessageResponseDTO messageResponse = createMessageResponse("Person successfully created with ID ", savedPerson.getId());
@@ -49,6 +49,7 @@ public class PersonService {
                 .orElseThrow(() -> new PersonNotFoundException(id));
 
         Person updatedPerson = personMapper.toModel(personDTO);
+        //updatedPerson.setId(id);
         Person savedPerson = personRepository.save(updatedPerson);
 
         MessageResponseDTO messageResponse = createMessageResponse("Person successfully updated with ID ", savedPerson.getId());
