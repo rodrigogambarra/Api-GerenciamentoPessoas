@@ -56,37 +56,28 @@ RequestMethod <i>GET</i> para url: http://localhost:8080/api/v1/people - <b>Reto
 
 RequestMethod <i>POST</i> Url: http://localhost:8080/api/v1/people - <b>Cria uma nova pessoa</b>
 
-####Exemplo:
+Exemplo:
 {
 
     "firstName":"Rodrigo",
-
     "lastName":"Gambarra",
-
     "cpf":"000.235.680-21",
-
     "birthDate":"05-10-2022",
-
     "phones":[
-
         {
-
         "type":"COMMERCIAL",
-
         "number":"83738376687382"
-
         }
-
     ]
 
 }
 
-RequestMethod <i>GET</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Retorna uma específica pessoa conforme valor do "id"</b>
+RequestMethod <i>GET</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Retorna uma pessoa específica conforme valor do "id"</b>
 
 
 RequestMethod <i>PUT</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Atualiza os dados de uma pessoa apartir do "id"</b>
 
-####Exemplo:
+Exemplo:
 {
 
     "id":1,
