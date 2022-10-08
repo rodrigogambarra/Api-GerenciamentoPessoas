@@ -81,37 +81,21 @@ Exemplo:
 {
 
     "id":1,
-
     "firstName":"Rodrigo",
-
     "lastName":"Gambarra",
-
     "cpf":"000.345.680-21",
-
     "birthDate":"05-10-2022",
-
     "phones":[
-
             {
-
                 "id":1,
-
                 "type":"COMMERCIAL",
-
                 "number":"83738376687382"
-
             },
-
             {
-
                 "id":2,
-
                 "type":"MOBILE",
-
                 "number":"83738378281182"
-
             }
-
     ]
 
 }
