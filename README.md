@@ -52,9 +52,9 @@ As principais funcionalidades do projeto são:
 ## Como usar
 <p>Após iniciar o sistema, a api disponibiliza os seguintes métodos request:</p>
 
-RequestMethod <i>GET</i> para url: http://localhost:8080/api/v1/people - <b>Retorna lista de todas pessoas cadastradas</b>
+1 RequestMethod <i>GET</i> para url: http://localhost:8080/api/v1/people - <b>Retorna lista de todas pessoas cadastradas</b>
 
-RequestMethod <i>POST</i> Url: http://localhost:8080/api/v1/people - <b>Cria uma nova pessoa</b>
+2 RequestMethod <i>POST</i> Url: http://localhost:8080/api/v1/people - <b>Cria uma nova pessoa</b>
 
 Exemplo:
 {
@@ -72,10 +72,10 @@ Exemplo:
 
 }
 
-RequestMethod <i>GET</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Retorna uma pessoa específica conforme valor do "id"</b>
+3 RequestMethod <i>GET</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Retorna uma pessoa específica conforme valor do "id"</b>
 
 
-RequestMethod <i>PUT</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Atualiza os dados de uma pessoa apartir do "id"</b>
+4 RequestMethod <i>PUT</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Atualiza os dados de uma pessoa apartir do "id"</b>
 
 Exemplo:
 {
@@ -100,7 +100,7 @@ Exemplo:
 
 }
 
-RequestMethod <i>Delete</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Deleta uma pessoa específica, conforme valor do "id"</b>
+5 RequestMethod <i>Delete</i> Url: http://localhost:8080/api/v1/people/{id} - <b>Deleta uma pessoa específica, conforme valor do "id"</b>
 
 
 ## Pré requisitos
