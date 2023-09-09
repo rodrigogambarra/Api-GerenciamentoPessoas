@@ -95,10 +95,8 @@ public class PersonServiceTest {
         PersonDTO updatePersonDTORequest = createFakeDTO();
         updatePersonDTORequest.setId(updatedPersonId);
         updatePersonDTORequest.setLastName("Rodrigo updated");
-
         Person expectedPersonToUpdate = createFakeEntity();
         expectedPersonToUpdate.setId(updatedPersonId);
-
         Person expectedPersonUpdated = createFakeEntity();
         expectedPersonUpdated.setId(updatedPersonId);
         expectedPersonToUpdate.setLastName(updatePersonDTORequest.getLastName());
@@ -108,7 +106,6 @@ public class PersonServiceTest {
         when(personRepository.save(any(Person.class))).thenReturn(expectedPersonUpdated);
 
         MessageResponseDTO successMessage = personService.update(updatedPersonId, updatePersonDTORequest);
-
         assertEquals("Person successfully updated with ID 2", successMessage.getMessage());
     }
 
@@ -119,10 +116,8 @@ public class PersonServiceTest {
         PersonDTO updatePersonDTORequest = createFakeDTO();
         updatePersonDTORequest.setId(invalidPersonId);
         updatePersonDTORequest.setLastName("Peleias updated");
-
         when(personRepository.findById(invalidPersonId))
                 .thenReturn(Optional.ofNullable(any(Person.class)));
-
         assertThrows(PersonNotFoundException.class, () -> personService.update(invalidPersonId, updatePersonDTORequest));
     }
 
@@ -130,20 +125,16 @@ public class PersonServiceTest {
     void testGivenValidPersonIdThenReturnSuccesOnDelete() throws PersonNotFoundException {
         var deletedPersonId = 1L;
         Person expectedPersonToDelete = createFakeEntity();
-
         when(personRepository.findById(deletedPersonId)).thenReturn(Optional.of(expectedPersonToDelete));
         personService.delete(deletedPersonId);
-
         verify(personRepository, times(1)).deleteById(deletedPersonId);
     }
 
     @Test
     void testGivenInvalidPersonIdThenReturnSuccesOnDelete() throws PersonNotFoundException {
         var invalidPersonId = 1L;
-
         when(personRepository.findById(invalidPersonId))
                 .thenReturn(Optional.ofNullable(any(Person.class)));
-
         assertThrows(PersonNotFoundException.class, () -> personService.delete(invalidPersonId));
     }
 
